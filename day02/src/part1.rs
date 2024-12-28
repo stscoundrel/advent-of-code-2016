@@ -6,7 +6,7 @@ pub enum Direction {
     Right,
 }
 
-fn parse_input(input: &str) -> Vec<Vec<Direction>> {
+pub fn parse_input(input: &str) -> Vec<Vec<Direction>> {
     input
         .lines()
         .map(|line| {
