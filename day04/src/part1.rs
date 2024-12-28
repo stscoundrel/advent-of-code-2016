@@ -4,9 +4,9 @@ use regex::Regex;
 
 #[derive(Debug)]
 pub struct Room {
-    encrypted: String,
-    id: u32,
-    checksum: String,
+    pub encrypted: String,
+    pub id: u32,
+    pub checksum: String,
 }
 
 pub fn parse_input(input: &str) -> Vec<Room> {
@@ -30,7 +30,7 @@ pub fn parse_input(input: &str) -> Vec<Room> {
     rooms
 }
 
-fn is_real_room(room: &Room) -> bool {
+pub fn is_real_room(room: &Room) -> bool {
     let mut counts = HashMap::new();
 
     for letter in room.encrypted.chars() {
