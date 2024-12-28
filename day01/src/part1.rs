@@ -1,18 +1,18 @@
 #[derive(Debug, Clone, Copy)]
-enum Direction {
+pub enum Direction {
     Left,
     Right,
 }
 
 #[derive(Debug, Clone, Copy)]
-enum Facing {
+pub enum Facing {
     North,
     East,
     South,
     West,
 }
 
-fn parse_input(input: &str) -> Vec<(Direction, i32)> {
+pub fn parse_input(input: &str) -> Vec<(Direction, i32)> {
     input
         .split(", ")
         .map(|part| {
